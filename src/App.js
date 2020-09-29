@@ -40,9 +40,13 @@ export default function App() {
 
   useEffect(() => {
     // getCss()
-    setInterval(() => {
+    let mysetval = setInterval(() => {
       getCss();
     }, 2000);
+
+    return () => {
+      clearInterval(mysetval);
+    };
   });
 
   return (
