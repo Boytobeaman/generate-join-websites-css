@@ -1,0 +1,147 @@
+// Variables
+//
+
+// theme color
+
+// $main-theme-color: red;
+$main-theme-color: #FE8700;
+$main-theme-color-darker: #d04a02;
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   #fff;
+// $body-bg:                   #F7F5FB;
+$body-color:                #212529;
+// $body-color:                red;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $main-theme-color;
+$link-decoration:           none;
+$link-hover-color:          darken($link-color, 15%);
+$link-hover-decoration:     underline;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+$line-height-lg:              1.5;
+$line-height-sm:              1.5;
+
+
+$border-radius:               15px;
+$border-radius-lg:            20px;
+$border-radius-sm:            15px;
+
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      Arial, Helvetica, sans-serif;
+// $font-family-sans-serif:      "Arial Black", Gadget, sans-serif;
+// $font-family-sans-serif:      Verdana, Geneva, sans-serif;
+
+$font-family-serif:            Georgia, serif;
+
+$font-family-monospace:       "Courier New", Courier, monospace;
+$font-family-base:            $font-family-sans-serif !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$font-size-base:              1.4rem;
+
+$line-height-base:            1.5 !default;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-x:         .75rem !default;
+$input-btn-line-height:       $line-height-base;
+
+$input-btn-padding-y-sm:      .25rem !default;
+$input-btn-padding-x-sm:      1.25rem !default;
+$input-btn-line-height-sm:    $line-height-sm !default;
+
+
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+
+// Allows for customizing button radius independently from global border radius
+// $btn-border-radius:           $border-radius !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+// $btn-border-radius-sm:        $border-radius-sm !default;
+
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+$btn-line-height:             $input-btn-line-height;
+
+$btn-padding-y-sm:            $input-btn-padding-y-sm !default;
+$btn-padding-x-sm:            $input-btn-padding-x-sm !default;
+$btn-line-height-sm:          $input-btn-line-height-sm !default;
+
+
+
+// Forms
+
+$label-margin-bottom:                   .5rem !default;
+
+$input-padding-y:                       $input-btn-padding-y !default;
+$input-padding-x:                       $input-btn-padding-x !default;
+$input-line-height:                     $input-btn-line-height !default;
+
+
+$input-border-radius:                   $border-radius !default;
+$input-border-radius-lg:                $border-radius-lg !default;
+$input-border-radius-sm:                $border-radius-sm !default;
+
+
+// Modals
+// $modal-header-bg:                       #fff;
+$modal-header-bg:                       #E2E6F2;
+$modal-header-color:                    #212529;
+
+
+// Cards
+$card-cap-bg:                           rgba(0,0,0,.03);
+$card-cap-bg:                           #E2E6F2;
+
+
+
+// Popovers
+$popover-max-width:                 inherit;
+$popover-sm-max-width:               300px;
+$popover-md-max-width:               500px;
+$popover-lg-max-width:               800px;
+
+// Navbar
+$navbar-bg-color:                    #3E3E62;
+$navbar-color:                       white;
+
+// Pagination
+
+
+$pagination-focus-box-shadow:       none;
+
+$pagination-active-color:           #fff;
+$pagination-active-bg:              $main-theme-color;
+$pagination-active-border-color:    $main-theme-color;
+
+$pagination-hover-bg:               #fff;

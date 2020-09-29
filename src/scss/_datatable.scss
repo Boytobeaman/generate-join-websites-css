@@ -1,0 +1,94 @@
+div.dataTables_wrapper{
+    div.dataTables_length{
+         select{
+            padding-right: 20px;
+         }
+    }
+    div.dataTables_paginate {
+        ul.pagination{
+            margin: 10px 0;
+        }
+    }
+    .icon-wrapper{
+        i {
+            font-size: 1.5em;
+        }
+    }
+    .graph_icon {
+        position: relative;
+        top: -4px;
+        border: none;
+        background-color: transparent;
+        color: #f68e1d;
+        cursor: pointer;
+    }
+    .model_options_col {
+        text-align: center;
+    }
+    .date_icon {
+        border: none;
+        background-color: transparent;
+        color: #000;
+        float: left;
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+    }
+    td{
+        input.form-control{
+            height: 21px;
+        }
+    }
+    .progress_date {
+        font-size: 11px;
+        text-align: center;
+        font-weight: 500;
+    }
+}
+.table{
+    border: 1px solid #eceeef;
+    > thead{
+        > tr{
+            > th{
+                white-space: nowrap;
+                border-bottom: 1px solid #ddd;
+                border-top: none;
+            }
+        }
+    }
+    tr td,tr th{
+        vertical-align: middle;
+    }
+    tr.selected{
+        background-color: #ccc;
+        &:hover{
+            background-color: #ccc;
+        }
+    }
+    &.table-fixed-h{
+        tbody{
+            overflow-y:auto;
+            width: 100%;
+        }
+        thead,tbody,tr,td,th{
+            display:block;
+        }
+        tbody{
+            td{
+                float:left;
+            }
+        }
+        &.table-fixed-h-300{
+            tbody{
+                max-height: 300px;
+            }
+        }
+        thead {
+            tr{
+                th{
+                    float:left;
+                }
+            }
+        }
+    }
+}

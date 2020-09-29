@@ -1,0 +1,22 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #3e3e62;
+    height: initial;
+    border-top: none;
+    .nav-footer{
+        li {
+            float: right;
+            margin-right: 1.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            height: 40px;
+            line-height: 40px;
+            a{
+                padding: 0;
+                color: #fff;
+            }
+        }
+    }
+}

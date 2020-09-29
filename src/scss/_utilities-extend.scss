@@ -1,0 +1,234 @@
+.theme-color-bg{
+	background-color: $main-theme-color;
+}
+.pl-10 {
+    padding-left: 10px;
+}
+.p-30p{
+    padding: 30px;
+}
+.pr-20p{
+    padding-right: 20px!important;
+}
+.pr-40 {
+    padding-right: 40px;
+}
+.pr-60{
+    padding-right: 60px;
+}
+.pt-10 {
+    padding-top: 10px;
+}
+.pt-10p {
+    padding-top: 10px;
+}
+.pt-5p {
+    padding-top: 5px;
+}
+.pl-5p {
+    padding-left: 5px;
+}
+.px-15p{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pb-5p {
+    padding-bottom: 5px;
+}
+.mt-5p{
+    margin-top: 5px;
+}
+.mt-6p{
+    margin-top: 6px;
+}
+.mt-10p{
+    margin-top: 10px;
+}
+.mb-5p {
+    margin-bottom: 5px !important;
+}
+.mb-8p {
+    margin-bottom: 8px !important;
+}
+.mb-100p{
+    margin-bottom: 100px;
+}
+.mr-auto {
+    margin-right: auto!important;
+}
+.mr-5p {
+    margin-right: 5px;
+}
+.ml-5p {
+    margin-left: 5px;
+}
+.ml-10p {
+    margin-left: 10px;
+}
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px;
+}
+
+.border-0 {
+    border: 0!important;
+}
+.w-inherit{
+    width: inherit!important;
+}
+
+
+
+/* add bootstrap4 class */
+.d-flex {
+    display: -webkit-box!important;
+    display: -webkit-flex!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.d-none {
+  display: none !important;
+}
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.justify-content-center {
+    -webkit-box-pack: center!important;
+    -webkit-justify-content: center!important;
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.justify-content-between {
+    -webkit-box-pack: justify!important;
+    -webkit-justify-content: space-between!important;
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.justify-content-end {
+    -webkit-box-pack: end!important;
+    -webkit-justify-content: flex-end!important;
+    -ms-flex-pack: end!important;
+    justify-content: flex-end!important;
+}
+.align-items-center {
+    -webkit-box-align: center!important;
+    -webkit-align-items: center!important;
+    -ms-flex-align: center!important;
+    align-items: center!important;
+}
+.text-white{
+    color: #fff;
+}
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+.badge-pill {
+    padding-right: .6em;
+    padding-left: .6em;
+    border-radius: 10rem;
+}
+.badge-secondary {
+    color: #fff;
+    background-color: #6c757d;
+}
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+.badge-warning {
+    color: #212529;
+    background-color: #ffc107;
+}
+.scroll-y {
+    overflow-y: auto;
+    /*overflow-x: hidden;*/
+    padding-right: 20px;
+}
+
+.scroll-y-550 {
+    max-height: 550px;
+}
+
+.scroll-y-500 {
+    max-height: 500px;
+}
+
+.scroll-y-450 {
+    max-height: 450px;
+}
+
+.scroll-y-350 {
+    max-height: 350px;
+}
+
+
+.scroll-y-300 {
+    max-height: 300px;
+}
+
+.scroll-y-200 {
+    max-height: 200px;
+}
+
+.scroll-y-150 {
+    height: 150px;
+}
+
+.scroll-y-100 {
+    max-height: 100px;
+}

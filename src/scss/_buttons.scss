@@ -1,0 +1,150 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+
+.btn{
+  outline: 0;
+  border-radius: $btn-border-radius;
+  line-height: $btn-line-height;
+  box-shadow: none;
+  padding: 0.2em 1.9em;
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  //click the button and don't let it go
+  //点击button不松手时的样式
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    box-shadow:none;
+    outline: 0;
+      &:focus {
+        box-shadow:none;
+        outline: 0;
+      }
+    }
+}
+
+.btn.btn-myclass,
+.button.btn-myclass{
+  background-color:$main-theme-color;
+  border: 1px solid $main-theme-color;
+  color: #fff;
+  &:hover,
+  &.hover{
+    background-color: $main-theme-color;
+    opacity: 0.8;
+  }
+  //style after click the button and mouse do not click again
+  //鼠标点击后松手，但没有再次点击鼠标的样式
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: none;
+    background-color: $main-theme-color;
+    border-color: $main-theme-color;
+  }
+
+  //click the button and don't let it go
+  //点击button不松手时的样式
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    // @include box-shadow($btn-active-box-shadow);
+    color: #fff;
+    background-color: darken($main-theme-color, 10%);
+    border-color: darken($main-theme-color, 10%);
+    box-shadow:none;
+    outline: 0;
+      &:focus {
+        background-color: darken($main-theme-color, 10%);
+        border-color: darken($main-theme-color, 10%);
+        box-shadow:none;
+        outline: 0;
+        // @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      }
+    }
+}
+
+.btn.btn-outline-primary.btn-myclass,
+.btn.button-secondary.btn-myclass{
+  color: $main-theme-color;
+  border: 1px solid transparent;
+  background-color: transparent;
+  background-image: none;
+  border-color: $main-theme-color;
+
+  &:hover,
+  &.hover{
+    background-color: $main-theme-color;
+    color: $white;
+    opacity: 0.8;
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+  color: #fff;
+  background-color: $main-theme-color;
+  box-shadow:none;
+  outline: 0;
+  border-color: $main-theme-color;
+  &:focus {
+    background-color: darken($main-theme-color, 10%);
+    box-shadow:none;
+    outline: 0;
+    border-color: $main-theme-color;
+  }
+  }
+}
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  background-color: transparent;
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: $link-hover-decoration;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+
+
+
+//
+// Button Sizes
+//
+
+.btn-lg.btn-myclass{
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm.btn-myclass,.button-small.btn-myclass {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+table .button.button-small {
+  height: inherit;
+}

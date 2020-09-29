@@ -1,0 +1,70 @@
+body {
+  margin: 0; // 1
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: left; // 3
+  background-color: $body-bg; // 2
+}
+
+
+
+//
+// Links
+//
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+  -webkit-text-decoration-skip: objects; // Remove gaps in links underline in iOS 8+ and Safari 8+.
+
+  @include hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+  &:link{
+    color: $link-color;
+  }
+  &:visited{
+    color: $link-color;
+  }
+  &:hover{
+    color:$link-hover-color;
+  }
+  &:active{ 
+    color:$link-hover-color;
+  } 
+}
+body{
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-base;
+  }
+}
+
+.orion-color{
+  color: $main-theme-color;
+}
+.orion-color-darker{
+  color: $main-theme-color-darker;
+}
+
+.grey-border{
+  border-color: $gray-200;
+  &.active{
+    border-color: $main-theme-color;
+  }
+}
+.hide {
+  display: none;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}

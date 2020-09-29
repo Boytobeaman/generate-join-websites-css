@@ -1,0 +1,25 @@
+table .progress .progress-bar{
+    line-height: inherit;
+    font-size: 0.6rem;
+}
+.progress {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    font-size: .75rem;
+    line-height: 1rem;
+    text-align: center;
+    background-color: #c2c6c7;
+    border-radius: .25rem;
+    width: initial;
+    height: 14px;
+    box-shadow: none;
+    border: 0;
+}
+.model_options_col{
+    >.progress {
+        width: 100%;
+    }
+}

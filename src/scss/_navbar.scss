@@ -1,0 +1,165 @@
+.navbar {
+    z-index: 1001;
+    padding: 0;
+    .admin-setting.active {
+        background-color: $main-theme-color;
+        i {
+            color: #fff;
+        }
+    }
+    .top-bar {
+        background-color: $navbar-bg-color;
+        color: $navbar-color;
+        .app-name {
+            color: $main-theme-color;
+            font-weight: bold;
+        }
+        .topbar-padding {
+            height: 60px;
+            padding: 1.0rem 1.5rem;
+            #userInforDropdown {
+                width: 18px;
+            }
+            #notiIcon {
+                font-size: 2rem;
+                position: relative;
+            }
+            #notiNum {
+                position: absolute;
+                font-size: 15px;
+                right: -10px;
+                top: -5px;
+                padding: 2px 6px;
+            }
+        }
+        i{
+            color: $main-theme-color;
+        }
+        #userInforDropdown {
+            #userInfor {
+                background: transparent !important;
+                border: none;
+                padding-left: 0 !important;
+                cursor: pointer;
+            }
+            .dropdown-menu {
+                padding-bottom: 0;
+                left: inherit;
+                right: -15px;
+                margin-top: 10px;
+                width: 17.5rem;
+                border: none;
+                border-radius: 2px !important;
+            }
+            #loginUserName {
+                margin-top: 0.55rem;
+                margin-bottom: 0;
+                font-size: 1rem;
+            }
+            #loginEmail {
+                margin-top: 0;
+                font-size: 0.75rem;
+                margin-bottom: 0.55rem;
+            }
+            .dropdown-item {
+                border-bottom: 1px solid #e5e5e5;
+                &.active{
+                    background-color: $main-theme-color;
+                    p{
+                        color: #fff;
+                    }
+                }
+                p{
+                    margin: 10px 0;
+                    color: #373a3c;
+                }
+            }
+            .dropdown-divider {
+                margin: 0;
+            }
+            img {
+                width: 18px;
+                cursor: pointer;
+            }
+        }
+    }
+    &.sub-headers {
+        top: 60px;
+        width: 80px;
+        height: calc(100vh - 60px)!important;
+        background-color: #E2E6F2;
+        z-index: 100;
+        .navbar-nav li{
+            height: 60px;
+            line-height: 60px;
+            position: relative;
+            &:hover{
+                .sub-menus {
+                    display: block;
+                }
+            }
+            .sub-menus{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background-color: $navbar-bg-color;
+                min-width: 120px;
+                li{
+                    height: 35px;
+                    line-height: 35px;
+                    color: #fff;
+                    &:hover{
+                        background-color: #5f5f7d;
+                    }
+                    a{
+                        color: #fff;
+                        &:hover{
+                            color: #fff;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            a{
+                height: inherit!important;
+                line-height: inherit!important;
+                margin: 0;
+                &:link,&:visited,:hover,:active{
+                    display: inline-block;
+                    text-decoration: none;
+                    background-color: transparent;
+                    border-bottom: none;
+                }
+            }
+            &.active{
+                background-color: $navbar-bg-color;
+                border-top-right-radius: 35px;
+                border-bottom-right-radius: 35px;
+                a{
+                    &:link,&:visited,:hover,:active{
+                        display: inline-block;
+                        text-decoration: none;
+                        background-color: transparent;
+                        border-bottom: none;
+                    }
+                }
+                img.active-status{
+                    display: inline-block;
+                }
+                img.not-active-status{
+                display: none;
+            }
+            }
+            img.active-status{
+                display: none;
+            }
+            
+        }
+        .navbar-nav>li{
+            &:hover{
+                background-color: #757594;
+            }
+        }
+    }
+}

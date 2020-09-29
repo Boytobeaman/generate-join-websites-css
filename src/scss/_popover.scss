@@ -1,0 +1,12 @@
+.popover {
+    max-width: $popover-max-width;
+    .popover-sm{
+        max-width: $popover-sm-max-width;
+    }
+    .popover-md{
+        max-width: $popover-md-max-width;
+    }
+    .popover-lg{
+        max-width: $popover-lg-max-width;
+    }
+}

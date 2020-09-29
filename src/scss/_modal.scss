@@ -1,0 +1,20 @@
+.modal-content{
+	.modal-header {
+		color: $modal-header-color;
+		background-color: $modal-header-bg;
+		.modal-title{
+			display: inline-block;
+		}
+	}
+	.modal-body {
+		position: relative;
+		padding: 15px;
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 992px){
+	.modal-extra-lg{
+		max-width: calc(100vw - 200px);
+	}
+}
+
