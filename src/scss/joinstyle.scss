@@ -10,7 +10,10 @@
 $theme-color: #d9534f;
 // $nav-bg-color: #a01515;
 $nav-bg-color: #1f1e1e;
-
+// begin join style
+.a{
+    color: #1f1e1e;
+}
 .theme-color{
     color: darken( $theme-color, 10% );
 }
