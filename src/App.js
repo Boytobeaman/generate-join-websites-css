@@ -8,9 +8,21 @@ export default function App() {
   const [css, setCss] = useState('')
   const [count, setCount] = useState(0)
 
+  const findCssElement = (element) => {
+    debugger
+    let newCssElement = element.nextElementSibling
+    if(newCssElement.tagName != "STYLE"){
+      newCssElement = findCssElement(newCssElement)
+    }
+    return newCssElement
+  }
+
   const getCss = () => {
     // let newCss = document.getElementsByTagName('style')[0].innerText;
-    let newCss = document.getElementsByTagName('title')[0].nextElementSibling.innerText;
+    let titleElement = document.getElementsByTagName('title')[0];
+    let newCssElement = findCssElement(titleElement)
+
+    let newCss = newCssElement.innerText;
     if(css !== newCss){
       setCss(newCss)
       setCount(count + 1)
