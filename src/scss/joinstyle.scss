@@ -11,9 +11,9 @@
 @import "utilities";
 
 
-$theme-color: #d9534f;
+$theme-color: #323876;
 // $nav-bg-color: #a01515;
-$nav-bg-color: #1f1e1e;
+$nav-bg-color: #746f6f;
 // begin join style
 
 .theme-color{
@@ -67,6 +67,13 @@ header a {
     }
 }
 
+
+// button element
+button.elementor-button,
+button.elementor-search-form__submit{
+    background-color: $theme-color!important;
+}
+
 .home{
     .rsrc-main{
         width:100%;
@@ -96,7 +103,6 @@ header a {
             }
         }
     }
-    //product category page
     .term-description{
         clear: both;
     }
@@ -158,6 +164,10 @@ header a {
             }
         }
     } 
+}
+
+nav.elementor-section.elementor-top-section{
+    background-color: $theme-color!important;
 }
 // nav bar end
 
@@ -238,7 +248,10 @@ header a {
                 .product-val-inch {
                     background-color: #f6f6f6;
                 }
-
+                .product-cat-inquiry{
+                    background-color: $theme-color;
+                    border-color: $theme-color;
+                }
             }
         }
     }
@@ -276,7 +289,9 @@ header a {
         margin-bottom: 0;
     }
     .product-inquiry {
-        margin-bottom: 10px
+        margin-bottom: 10px;
+        background-color: $theme-color;
+        border-color: $theme-color;
     }
 }
 
@@ -294,6 +309,9 @@ footer{
             margin-right: 15px;
         }
         
+    }
+    &.elementor-section.elementor-top-section{
+        border-color: $theme-color !important;
     }
 }
 
