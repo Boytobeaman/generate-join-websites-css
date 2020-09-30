@@ -4,9 +4,9 @@
 
 @import "mixins";
 //test class
-.abc{
-    background: #1f1e1e;
-}
+// .abc{
+//     background: #1f1e1e;
+// }
 
 @import "utilities";
 
@@ -276,7 +276,7 @@ header a {
         margin-bottom: 0;
     }
     .product-inquiry {
-        margin-top: 20px
+        margin-bottom: 10px
     }
 }
 
@@ -308,12 +308,16 @@ footer{
         padding: 10px 15px;
         color: #fff;
         background-color: darken( $theme-color, 10% );
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         >button.close {
             color: #fff;
             opacity: 1;
         }
         .modal-title {
             font-weight: bold;
+            display: inline-block;
+            color: #fff;
         }
     }
     .modal-body {
@@ -396,41 +400,39 @@ footer{
             }
         }
     }
-    .rsrc-main{
-        .products{
-            .product{
-                .product-wrap{
-                    .product-img-wrap {
-                        display: none;
+    .products{
+        .product{
+            min-height: 0;
+            .product-wrap{
+                .product-img-wrap {
+                    display: none;
+                    width: 100%;
+                    margin-right: initial;
+                    img {
                         width: 100%;
-                        margin-right: initial;
-                        img {
-                            width: 100%;
-                        }
                     }
-                    .product-right{
-                        >.row {
-                            margin-left: initial;
-                            .product-attributes{
-                                .volumn{
-                                    display: none;
-                                }
-                            }
-                            .product-title{
-                                display: block;
-                                overflow: hidden;
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                                border-bottom: 1px solid #fff;
-                            }
-                            .product-model{
-                               float: left!important;
+                }
+                .product-right{
+                    >.row {
+                        margin-left: initial;
+                        .product-attributes{
+                            .volumn{
+                                display: none;
                             }
                         }
+                        .product-title{
+                            display: block;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            border-bottom: 1px solid #fff;
+                        }
+                        .product-model{
+                           float: left!important;
+                        }
                     }
-                } 
-            }
-        } 
-    
-    }
+                }
+            } 
+        }
+    } 
 }
