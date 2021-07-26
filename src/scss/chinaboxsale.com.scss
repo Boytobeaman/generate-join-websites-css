@@ -180,6 +180,11 @@ footer{
 .product-type-simple{
   table.single-product-attr{
     border: 1px solid #e0e0e0;
+    td{
+      h4,hr{
+        margin: 0;
+      }
+    }
   }
   .product-inquiry{
     cursor: pointer;
