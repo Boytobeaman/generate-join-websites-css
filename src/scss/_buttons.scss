@@ -2,101 +2,78 @@
 
 //
 // Base styles
+//
 
-.btn{
-  outline: 0;
-  border-radius: $btn-border-radius;
-  line-height: $btn-line-height;
-  box-shadow: none;
-  padding: 0.2em 1.9em;
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: none;
-  }
-
-  //click the button and don't let it go
-  //点击button不松手时的样式
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    box-shadow:none;
-    outline: 0;
-      &:focus {
-        box-shadow:none;
-        outline: 0;
-      }
-    }
-}
-
-.btn.btn-myclass,
-.button.btn-myclass{
-  background-color:$main-theme-color;
-  border: 1px solid $main-theme-color;
-  color: #fff;
-  &:hover,
-  &.hover{
-    background-color: $main-theme-color;
-    opacity: 0.8;
-  }
-  //style after click the button and mouse do not click again
-  //鼠标点击后松手，但没有再次点击鼠标的样式
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: none;
-    background-color: $main-theme-color;
-    border-color: $main-theme-color;
-  }
-
-  //click the button and don't let it go
-  //点击button不松手时的样式
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-    // @include box-shadow($btn-active-box-shadow);
-    color: #fff;
-    background-color: darken($main-theme-color, 10%);
-    border-color: darken($main-theme-color, 10%);
-    box-shadow:none;
-    outline: 0;
-      &:focus {
-        background-color: darken($main-theme-color, 10%);
-        border-color: darken($main-theme-color, 10%);
-        box-shadow:none;
-        outline: 0;
-        // @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-      }
-    }
-}
-
-.btn.btn-outline-primary.btn-myclass,
-.btn.button-secondary.btn-myclass{
-  color: $main-theme-color;
-  border: 1px solid transparent;
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  text-decoration: if($link-decoration == none, null, none);
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
   background-color: transparent;
-  background-image: none;
-  border-color: $main-theme-color;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
 
-  &:hover,
-  &.hover{
-    background-color: $main-theme-color;
-    color: $white;
-    opacity: 0.8;
+  @include hover() {
+    color: $body-color;
+    text-decoration: none;
   }
-  &:not(:disabled):not(.disabled):active,
-  &:not(:disabled):not(.disabled).active {
-  color: #fff;
-  background-color: $main-theme-color;
-  box-shadow:none;
-  outline: 0;
-  border-color: $main-theme-color;
-  &:focus {
-    background-color: darken($main-theme-color, 10%);
-    box-shadow:none;
+
+  &:focus,
+  &.focus {
     outline: 0;
-    border-color: $main-theme-color;
+    box-shadow: $btn-focus-box-shadow;
   }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled) {
+    cursor: if($enable-pointer-cursor-for-buttons, pointer, null);
+
+    &:active,
+    &.active {
+      @include box-shadow($btn-active-box-shadow);
+
+      &:focus {
+        @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      }
+    }
   }
 }
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
 
 //
 // Link buttons
@@ -106,20 +83,16 @@
 .btn-link {
   font-weight: $font-weight-normal;
   color: $link-color;
-  background-color: transparent;
+  text-decoration: $link-decoration;
 
-  @include hover {
+  @include hover() {
     color: $link-hover-color;
     text-decoration: $link-hover-decoration;
-    background-color: transparent;
-    border-color: transparent;
   }
 
   &:focus,
   &.focus {
     text-decoration: $link-hover-decoration;
-    border-color: transparent;
-    box-shadow: none;
   }
 
   &:disabled,
@@ -132,19 +105,38 @@
 }
 
 
-
-
 //
 // Button Sizes
 //
 
-.btn-lg.btn-myclass{
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
 
-.btn-sm.btn-myclass,.button-small.btn-myclass {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
-table .button.button-small {
-  height: inherit;
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  + .btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
 }
