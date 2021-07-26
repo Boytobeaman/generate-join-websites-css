@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Button, message, Card } from "antd";
-import "./scss/joinstyle.scss";
-
 import "./styles.scss";
 
-let fileId = `/src/scss/joinstyle.scss:-css`;
+// import "./scss/joinstyle.scss";
+import "./scss/chinaboxsale.com.scss";
+
+// let fileId = `/src/scss/joinstyle.scss:-css`;
+let fileId = `/src/scss/chinaboxsale.com.scss:-css`;
 
 export default function App() {
   const [css, setCss] = useState("");
+  const [newCss, setNewCss] = useState("");
   const [count, setCount] = useState(0);
 
   const getCss = () => {
+    console.log(`triggered getCss`);
     // let newCss = document.getElementsByTagName('style')[0].innerText;
     // let newCss = document.getElementsByTagName('title')[0].nextElementSibling.innerText;
     let newCss = document.getElementById(fileId).innerText;
-    if (css !== newCss) {
-      setCss(newCss);
-      setCount(count + 1);
-    }
+    setNewCss(newCss);
   };
 
   const copyCss = () => {
@@ -26,6 +27,12 @@ export default function App() {
     document.execCommand("Copy"); // 执行浏览器复制命令
     message.info("已复制到剪切板！");
   };
+
+  useEffect(() => {
+    console.log(`newCss changed`);
+    setCss(newCss);
+    setCount((latest) => latest + 1);
+  }, [newCss]);
 
   useEffect(() => {
     // getCss()
