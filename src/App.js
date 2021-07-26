@@ -4,27 +4,16 @@ import "./scss/joinstyle.scss";
 
 import "./styles.scss";
 
+let fileId = `/src/scss/joinstyle.scss:-css`;
+
 export default function App() {
   const [css, setCss] = useState("");
   const [count, setCount] = useState(0);
 
-  const findCssElement = (element) => {
-    let newCssElement = element.nextElementSibling;
-    if (newCssElement.tagName !== "STYLE") {
-      newCssElement = findCssElement(newCssElement);
-    }
-    if (newCssElement.id && newCssElement.id.indexOf("join") < 0) {
-      newCssElement = findCssElement(newCssElement);
-    }
-    return newCssElement;
-  };
-
   const getCss = () => {
     // let newCss = document.getElementsByTagName('style')[0].innerText;
-    let titleElement = document.getElementsByTagName("title")[0];
-    let newCssElement = findCssElement(titleElement);
-
-    let newCss = newCssElement.innerText;
+    // let newCss = document.getElementsByTagName('title')[0].nextElementSibling.innerText;
+    let newCss = document.getElementById(fileId).innerText;
     if (css !== newCss) {
       setCss(newCss);
       setCount(count + 1);
@@ -40,14 +29,10 @@ export default function App() {
 
   useEffect(() => {
     // getCss()
-    let mysetval = setInterval(() => {
+    setInterval(() => {
       getCss();
     }, 2000);
-
-    return () => {
-      clearInterval(mysetval);
-    };
-  });
+  }, []);
 
   return (
     <div className="col">
