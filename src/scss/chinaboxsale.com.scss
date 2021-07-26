@@ -89,8 +89,12 @@ a {
 
 //footer section begin
 footer{
-  #footer-bottom{
+  #footer-widgets{
     background-color: $theme-color;
+    color: #fff;
+  }
+  #footer-bottom{
+    background-color: darken($color: $theme-color, $amount: 20%);
     color: #fff;
   }
 }
