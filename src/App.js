@@ -17,8 +17,21 @@ export default function App() {
     console.log(`triggered getCss`);
     // let newCss = document.getElementsByTagName('style')[0].innerText;
     // let newCss = document.getElementsByTagName('title')[0].nextElementSibling.innerText;
-    let newCss = document.getElementById(fileId).innerText;
-    setNewCss(newCss);
+    // let newCss = document.getElementById(fileId).innerText;
+
+    let tempCss;
+    let codePenIDElement = document.getElementById(fileId);
+    if(codePenIDElement){
+      tempCss = codePenIDElement.innerText;
+    }
+
+    if(!tempCss){
+      let styles = document.getElementsByTagName('style');
+      tempCss = styles[styles.length - 1].innerText;
+    }
+
+
+    setNewCss(tempCss);
   };
 
   const copyCss = () => {
@@ -55,7 +68,7 @@ export default function App() {
         style={{ width: "100%" }}
       >
         <h4>需要修改文件位置</h4>
-        <h4>/src/scss/joinstyle.scss</h4>
+        <h4>/src/scss/{`{joinstyle.scss / domaim.scss}`}</h4>
         <textarea
           id="cssValue"
           defaultValue={css}
