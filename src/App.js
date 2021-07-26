@@ -21,15 +21,14 @@ export default function App() {
 
     let tempCss;
     let codePenIDElement = document.getElementById(fileId);
-    if(codePenIDElement){
+    if (codePenIDElement) {
       tempCss = codePenIDElement.innerText;
     }
 
-    if(!tempCss){
-      let styles = document.getElementsByTagName('style');
+    if (!tempCss) {
+      let styles = document.getElementsByTagName("style");
       tempCss = styles[styles.length - 1].innerText;
     }
-
 
     setNewCss(tempCss);
   };
