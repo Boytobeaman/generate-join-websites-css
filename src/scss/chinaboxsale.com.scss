@@ -220,6 +220,9 @@ footer{
 
 //contact form
 .wpcf7-form{
+  label{
+    font-weight: 400;
+  }
   input.hidden{
     display: none;
   }
