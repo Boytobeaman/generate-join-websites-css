@@ -7,7 +7,7 @@
 @import "utilities";
 @import "my_small_grid";
 
-// wp theme: OceanWP
+// wp theme: astra
 
 $theme-color: #232f3e;
 // $nav-bg-color: #a01515;
@@ -104,6 +104,17 @@ footer{
 
 
 
+//page structure
+@media (min-width: 993px){
+  .ast-right-sidebar #primary {
+    padding-right: 20px;
+  }
+  .ast-right-sidebar #secondary {
+    padding-left: 20px;
+  }
+}
+
+
 // site bar section begin
 #right-sidebar{
   .tagcloud{
@@ -128,39 +139,34 @@ footer{
       &:hover{
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
       }
-      .woo-entry-inner{
-        .btn-wrap{
-          display:none;
+      .astra-shop-summary-wrap{
+        padding: 0 10px;
+        .woocommerce-loop-product__title{
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          max-width: 100%;
+          text-transform: capitalize;
+          color: $theme-color;
         }
-        .title{
-          margin-bottom: 5px;
-          h2{
-            margin-bottom: 0;
-            max-width: 100%;
-            a{
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              max-width: 100%;
-              text-transform: capitalize;
-              color: $theme-color;
-            
-            }
+      }
+      .inquiry-btn-wrap{
+        padding: 0 10px;
+        .product-cat-inquiry{
+          cursor: pointer;
+          width: 100%;
+          background-color: $action-color;
+          color: #000;
+          border: none;
+          font-weight: bold;
+          &:hover{
+            background-color: darken($color: $action-color, $amount: 20%);
           }
         }
       }
-      .product-cat-inquiry{
-        cursor: pointer;
-        width: 100%;
-        background-color: $action-color;
-        color: #000;
-        border: none;
-        font-weight: bold;
-        &:hover{
-          background-color: darken($color: $action-color, $amount: 20%);
-        }
-      }
+      
       .woo-acf-metas{
+        padding: 0 10px;
         text-align: left;
         width: 100%;
         .acf-item{
