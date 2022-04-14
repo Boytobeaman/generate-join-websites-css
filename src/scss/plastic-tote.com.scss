@@ -1,0 +1,442 @@
+$theme-color: #d9534f;
+// $nav-bg-color: #a01515;
+$nav-bg-color: #1f1e1e;
+
+.mr-2 {
+  margin-right: 1.5rem!important;
+}
+.no-gutters [class*=col-] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a {
+  color: $theme-color;
+  &:hover,&:focus{
+      color: darken($color: $theme-color, $amount: 20%);
+  }
+}
+
+// nav bar
+.rsrc-top-menu {
+  display: none;
+
+  .navbar-inverse {
+    background-color: $nav-bg-color;
+  }
+}
+
+.header-section {
+  background-color: $nav-bg-color;
+
+  .header-search-form {
+    input {
+      background-color: #fff;
+      color: $nav-bg-color;
+    }
+
+    button,
+    select {
+      border: 1px solid #fff;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+  }
+
+  #site-header {
+    a {
+      font-size: 26px;
+
+      &.custom-logo-link {
+
+        &:hover,
+        &:focus {
+          background-color: initial;
+        }
+        .custom-logo{
+          max-height: 56px;
+        }
+      }
+    }
+  }
+}
+
+.main-menu-section {
+  background-color: $nav-bg-color;
+
+  #main-navigation{
+    .navbar-nav{
+      >li{
+        border-radius: 5px;
+        >a {
+          text-transform: capitalize;
+          padding: 10px;
+          border-radius: 5px;
+
+          &:hover,
+          &:focus {
+            background-color: darken($theme-color, 10%);
+          }
+        }
+      }
+    }
+  }
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+
+    .navbar-collapse {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .current-menu-item {
+      background-color: darken($theme-color, 10%);
+    }
+  }
+}
+
+// nav bar end
+
+#breadcrumbs {
+  background-color: transparent;
+  background-image: none;
+  padding: 5px 0 0;
+  .breadcrumbs-inner {
+      background-color: #fff;
+      padding-top: 15px;
+      padding-bottom: 5px;
+      color: #3a3636;
+      a {
+          color: $theme-color;
+          &:hover {
+              background-color: initial;
+              text-decoration: underline;
+          }
+      }
+  }
+}
+
+// product cat list container
+.bb-2-white {
+  border-bottom: 2px solid #fff;
+}
+
+.br-2-white {
+  border-right: 2px solid #fff;
+}
+
+.table-head {
+  background: #dcddde;
+  padding: 10px 8px 8px;
+  font-weight: 700;
+}
+
+.woocommerce {
+  // product detail page
+  .product{
+    .summary{
+      .product_title{
+          font-size: 24px;
+          color: darken( $theme-color, 20% );
+          text-transform: capitalize;
+      }
+      .single-product-attr{
+        .value {
+            color: $theme-color;
+        }
+        hr {
+            margin-bottom: 0;
+        }
+        .product-inquiry {
+            margin-top: 20px
+        }
+      }
+    }
+    .related.products{
+      clear: both;
+    }
+  }
+
+  // product cat page
+  ul.products {
+    clear: both;
+
+    a {
+      color: #333;
+      font-family: 'Flexo-Light';
+    }
+
+    li.product {
+      background-color: #fff;
+      border-radius: 5px;
+
+      // readmore button
+      a.button.product_type_simple{
+        display: none;
+      }
+
+      // 传统自定义箱子展示模式，一行一个产品
+      &.product_cat-plastic-stacking-crates {
+        width: 100%!important;
+        padding: 0;
+        margin-bottom: 15px;
+      }
+      .product-wrap {
+        img {
+          float: left;
+          width: 200px;
+          margin-right: -200px;
+          margin-bottom: 0;
+          clear: left;
+        }
+        .product-right {
+          width: 100%;
+          float: left;
+          -webkit-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          -moz-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          -o-transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+          cursor: pointer;
+
+          &:hover {
+            -webkit-box-shadow: 0 0 15px rgba(89, 100, 101, 0.7);
+            -moz-box-shadow: 0 0 15px rgba(89, 100, 101, 0.7);
+            box-shadow: 0 0 15px rgba(89, 100, 101, 0.7);
+          }
+
+          >.row {
+            margin-left: 200px;
+            margin-right: 0;
+          }
+
+          .product-name {
+            background-color: #b8b6b6;
+            overflow: hidden;
+
+            .product-title {
+              margin: 0;
+              font-size: 20px;
+              height: 34px;
+              line-height: 34px;
+              color: #fff;
+              float: left;
+              padding-left: 15px;
+              text-transform: capitalize;
+            }
+
+            .product-model {
+              margin-right: 15px;
+            }
+          }
+
+          .product-attributes {
+            .value {
+              color: $theme-color;
+            }
+          }
+
+          .product-val-mm,
+          .product-val-inch {
+            padding: 0px 10px 0 4px;
+            line-height: 63px;
+            height: 63px;
+          }
+
+          .product-val-mm {
+            background-color: #eee;
+          }
+
+          .product-val-inch {
+            background-color: #f6f6f6;
+          }
+
+        }
+      }
+
+      // 主题默认展示模式，一行多个产品
+      .woocommerce-loop-product__title{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-transform: capitalize;
+      }
+      .inquiry-btn-wrap{
+        text-align: right;
+      }
+      .woo-acf-metas{
+        text-align: left;
+        width: 100%;
+        .acf-item{
+          &:not(:last-child){
+            border-bottom: 1px solid #ccc;
+          }
+          .item-key{
+            font-weight: bold;
+          }
+        } 
+      }
+    }
+  }
+}
+
+// footer section
+#back-top span {
+  background-color: $theme-color;
+}
+
+#contactUs{
+  .modal-header{
+      padding: 10px 15px;
+      color: #fff;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: darken( $theme-color, 10% );
+      >button.close {
+          color: #fff;
+          opacity: 1;
+      }
+      .modal-title {
+          font-weight: bold;
+      }
+  }
+  .modal-body {
+      padding-left: 30px;
+      padding-right: 30px;
+      label{
+          width: 100%;
+          input{
+              width: 100%;
+              &:focus {
+                  border: 1px solid darken( $theme-color, 10% );
+                  outline: none;
+              }
+          }
+          textarea {
+              width: 100%;
+              height: 60px;
+              &:focus {
+                  border: 1px solid darken( $theme-color, 10% );
+                  outline: none;
+              }
+          }
+      }
+      input[type="submit"] {
+          border: 1px solid darken( $theme-color, 10% );
+          color: darken( $theme-color, 10% );
+          border-radius: 5px;
+          &:hover {
+              background-color: darken( $theme-color, 10% );
+              color: #fff;
+          }
+      }
+      #productURL {
+          height: 1px;
+          visibility: hidden;
+          padding: 0;
+      }
+  }
+}
+
+
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  .product-attributes {
+
+    .external-dimension,
+    .internal-dimension {
+      &.table-head {
+        padding-top: 0;
+        height: 40px;
+      }
+    }
+  }
+}
+
+// ipad css
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .product-attributes {
+
+    .product-val-mm,
+    .product-val-inch {
+      line-height: initial;
+
+      span {
+        line-height: 31.5px;
+        display: block;
+
+        &:first-child {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .table-head {
+      font-size: 12px;
+    }
+  }
+}
+
+// phone css
+@media screen and (max-width: 767px) {
+  .navbar-header {
+    padding: 0 15px;
+
+    .navbar-toggle {
+      border: 1px solid #fff;
+
+      .icon-bar {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .woocommerce {
+    ul.products {
+      li.product {
+        .product-wrap {
+          a{
+            >img {
+              display: none;
+  
+              img {
+                width: 100%;
+              }
+            }
+          }
+          
+
+          .product-right {
+            >.row {
+              margin-left: 0!important;
+
+              .product-attributes {
+                .volumn {
+                  display: none;
+                }
+
+                .external-dimension {
+                  border-right: none;
+                }
+              }
+
+              .product-title {
+                display: block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                border-bottom: 1px solid #fff;
+                width: 100%;
+                text-align: left;
+              }
+
+              .product-model {
+                float: left !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
